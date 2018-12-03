@@ -1,0 +1,57 @@
+
+/***
+ * AP Statistic Project
+ * Programmer: Ao Wang
+ * 
+ * Plinko! In the same of Plinko on The Price is Right, a contestant gets to drop chips from
+ * anywhere on the top of a board. The chip falls through the board until it lands in one of
+ * the labeled slots at the bottom. The board consists of 13 rows of pegs. The player places
+ * the chip between any two pegs of his or her choice on the first row, but then gravity (and chance)
+ * determines the chip's path to the bottom. (To simplify communication, I've labeled the nine "slots"
+ * formed by adjacent pegs A through I)
+ * 
+ * Assignment: Suppose you only care if the chip will fall in the center slot, "10,000." Design a simulation
+ * for dropping a chip on the board and observinf whether it landed in this slot. Use my simulations to answer
+ * the folloing questions. 
+ * 
+ * 1. In which slot of slots should you drop a Plinko Chip to have the MAXIMUM probability of landing in the $10,000
+ * slot? Approximately what is the probability?
+ * 
+ * 2. In which slot or slots should you drop a Plinko Chip to have the MINIMUM probability of landing in the $10,000
+ * slot? Approximately what is the probability? 
+ *  
+ *  
+ */
+
+import java.util.Scanner;
+
+public class PLINKO {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Which slot would you like to drop it? (A, B, C, D, E, F, G, H, and I)");
+		String slot = scan.nextLine();
+
+		if (slot.equalsIgnoreCase("A")) {
+			PLINKOA.PlinkoA();
+		} else if (slot.equalsIgnoreCase("B")) {
+			PLINKOB.PlinkoB();
+		} else if (slot.equalsIgnoreCase("C")) {
+			PLINKOC.PlinkoC();
+		} else if (slot.equalsIgnoreCase("D")) {
+			PLINKOD.PlinkoD();
+		} else if (slot.equalsIgnoreCase("E")) {
+			PLINKOE.PlinkoE();
+		} else if (slot.equalsIgnoreCase("F")) {
+			PLINKOF.PlinkoF();
+		} else if (slot.equalsIgnoreCase("G")) {
+			PLINKOG.PlinkoG();
+		} else if (slot.equalsIgnoreCase("H")) {
+			PLINKOH.PlinkoH();
+		} else if (slot.equalsIgnoreCase("I")) {
+			PLINKOI.PlinkoI();
+		}
+
+	}
+}
