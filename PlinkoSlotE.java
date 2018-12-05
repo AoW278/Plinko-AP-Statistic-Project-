@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Random;
 
 public class PLINKOE {
 	static int count100 = 0;
