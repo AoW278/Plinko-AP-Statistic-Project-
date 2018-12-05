@@ -1,5 +1,4 @@
 import java.util.Random;
-import java.util.Scanner;
 
 public class PLINKOA {
 	static int count100 = 0;
