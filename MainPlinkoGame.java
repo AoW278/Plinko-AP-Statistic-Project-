@@ -28,6 +28,12 @@ import java.util.ArrayList;
 public class PLINKO {
 
 	public static void main(String[] args) {
+		
+		/**
+		Prints out the methods of each Slot class that shows the probability of
+		dropping to each of the 9 containers
+		**/
+		
 		System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 		PLINKOA.PlinkoA();
 		System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n");
@@ -64,6 +70,8 @@ public class PLINKO {
 		PLINKOI.PlinkoI();
 		System.out.println("IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII\n");
 
+		// arrays used to match the probability of each of the 9 slots with its corresponding letter
+		
 		double[] percentage10000 = { PLINKOA.percentage10000A(), PLINKOB.percentage10000B(), PLINKOC.percentage10000C(),
 				PLINKOD.percentage10000D(), PLINKOE.percentage10000E(), PLINKOF.percentage10000F(),
 				PLINKOG.percentage10000G(), PLINKOH.percentage10000H(), PLINKOI.percentage10000I() };
@@ -71,7 +79,9 @@ public class PLINKO {
 
 		double max = percentage10000[0];
 		double min = percentage10000[0];
-
+		
+		// determines the greatest probability from the 9 slots
+		
 		for (int i = 0; i < percentage10000.length; i++) {
 			if (max < percentage10000[i]) {
 				max = percentage10000[i];
@@ -81,7 +91,9 @@ public class PLINKO {
 
 		System.out.println("Maximum value: " + "Slot " + slots[findIndex(percentage10000, max)] + " has a " + max
 				+ " chance of getting $10,000");
-
+		
+	// determines the lowest probability from the 9 slots
+		
 		for (int i = 0; i < percentage10000.length; i++) {
 			if (min > percentage10000[i]) {
 				min = percentage10000[i];
@@ -91,7 +103,9 @@ public class PLINKO {
 				+ " chance of getting $10,000");
 
 	}
-
+	
+	// method used to match the specific probability with the slot that it was dropped from
+	
 	public static int findIndex(double[] percentage10000, double max) {
 		if (percentage10000 == null) {
 			return -1;
